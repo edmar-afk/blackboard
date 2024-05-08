@@ -1,0 +1,127 @@
+{% load static tailwind_tags %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>BSIT Blackboard</title>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<meta
+			http-equiv="X-UA-Compatible"
+			content="ie=edge" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+		<link
+			href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"
+			rel="stylesheet" />
+		{% tailwind_css %}
+	</head>
+
+	<body class="bg-gray-900 font-sans leading-normal tracking-normal">
+		{% include 'includes/navbar.html' %}
+		<main>
+			<div
+				class="relative pt-16 pb-32 flex content-center items-center justify-center"
+				style="min-height: 75vh">
+				<div
+					class="absolute top-0 w-full h-full bg-center bg-cover"
+					style="
+						background-image: url('https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1267&amp;q=80');
+					">
+					<span
+						id="blackOverlay"
+						class="w-full h-full absolute opacity-85 bg-black"></span>
+				</div>
+				<div class="container relative mx-auto">
+					<div class="items-center flex flex-wrap">
+						<div class="w-full lg:w-[70%] px-4 ml-auto mr-auto text-center">
+							<div class="pr-12">
+								<h1 class="text-white font-semibold text-5xl">Welcome to BSIT Blackboard</h1>
+								<p class="mt-4 text-lg text-gray-300">
+									Blackboard Learn is a web-based Learning Management System(LMS) designed to facilitate online
+									education and course management. It provides tools for instructors to create and deliver course
+									content, forum discussion, facilitate communication and asses student performance. BSIT refers to
+									Bachelor of Science in Information Technology, so a blackboard learn platform for BSIT programs would
+									likely to offer resources to BSIT.
+								</p>
+							</div>
+						</div>
+					</div>
+
+                    <div class="flex justify-center mt-16 items-center">
+                        <a href="{% url 'user_login' %}" class="mx-4 bg-white py-3 px-8 rounded-xl hover:scale-110 duration-300"><i class="fas fa-door-open mr-1"></i> Login</a>
+                        <a href="{% url 'register' %}" class="mx-4 bg-white py-3 px-8 rounded-xl hover:scale-110 duration-300"><i class="fa fa-user-plus mr-1" aria-hidden="true"></i> Register</a>
+                    </div>
+				</div>
+				<div
+					class="top-auto bottom-0 left-0 right-0 w-full absolute shadow-green-300 shadow-lg pointer-events-none overflow-hidden"
+					style="height: 70px">
+					<svg
+						class="absolute bottom-0 overflow-hidden"
+						xmlns="http://www.w3.org/2000/svg"
+						preserveAspectRatio="none"
+						version="1.1"
+						viewBox="0 0 2560 100"
+						x="0"
+						y="0">
+						<polygon
+							class="text-green-300 fill-current"
+							points="2560 0 2560 100 0 100"></polygon>
+					</svg>
+				</div>
+			</div>
+			<section class="bg-gray-900 -mt-24">
+				<div class="container mx-auto px-4">
+					<div class="flex flex-wrap">
+						<a href="https://www.niu.edu/blackboard/students/discussion.shtml" target="_blank" class="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
+							<div class="relative flex flex-col min-w-0 break-words bg-white hover:bg-gray-400 duration-300 w-full mb-8 shadow-lg rounded-lg">
+								<div class="px-4 py-5 flex-auto">
+									<div
+										class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400">
+										<i class="fas fa-award"></i>
+									</div>
+									<h6 class="text-xl font-semibold uppercase">Teaching and Learning <br> with Blackboard</h6>
+									<p class="mt-2 mb-4 text-gray-600">
+										Reference
+									</p>
+								</div>
+							</div>
+						</a>
+						<a href="https://home.interface.edu.ph/index.php/admission" target="_blank" class="w-full md:w-4/12 px-4 text-center">
+							<div class="relative flex flex-col min-w-0 break-words bg-white hover:bg-gray-400 duration-300 w-full mb-8 shadow-lg rounded-lg">
+								<div class="px-4 py-5 flex-auto">
+									<div
+										class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-blue-400">
+										<i class="fas fa-retweet"></i>
+									</div>
+									<h6 class="text-xl font-semibold uppercase">Interface Computer College</h6>
+									<p class="mt-2 mb-4 text-gray-600">
+										Reference
+									</p>
+								</div>
+							</div>
+						</a>
+						<a href="https://help.blackboard.com/Learn/Instructor/Ultra/Course_Content/Create_Content/Create_Course_Materials/Link_to_Content_and_Tools" target="_blank" class="pt-6 w-full md:w-4/12 px-4 text-center">
+							<div class="relative flex flex-col min-w-0 break-words bg-white hover:bg-gray-400 duration-300 w-full mb-8 shadow-lg rounded-lg">
+								<div class="px-4 py-5 flex-auto">
+									<div
+										class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-green-400">
+										<i class="fas fa-fingerprint"></i>
+									</div>
+									<h6 class="text-xl font-semibold uppercase">Blackboard now part <br> of Anthology</h6>
+									<p class="mt-2 mb-4 text-gray-600">
+										Reference
+									</p>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+	</body>
+</html>
